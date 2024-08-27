@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDE HTML/CSS/JS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="editor">
+        <div class="code-editor">
+            <h2>HTML</h2>
+            <textarea id="htmlCode" placeholder="Escribe tu código HTML aquí"></textarea>
+            <button onclick="downloadCode('html')">Download HTML</button>
+            <br><br><br>
+            <h2>CSS</h2>
+            <textarea id="cssCode" placeholder="Escribe tu código CSS aquí"></textarea>
+            <button onclick="downloadCode('css')">Download CSS</button>
+            <br><br><br>
+            <h2>JavaScript</h2>
+            <textarea id="jsCode" placeholder="Escribe tu código JavaScript aquí"></textarea>
+            <button onclick="downloadCode('js')">Download JavaScript</button>
+            <br><br><br>
+            <button onclick="runCode()">Ejecutar</button>
+            <br><br><br><br>
+        </div>
+    </div>
+    <div class="output">
+        <h2>Resultado</h2>
+        <iframe id="outputFrame"></iframe>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
