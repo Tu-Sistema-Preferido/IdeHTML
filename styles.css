@@ -1,38 +1,38 @@
+/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
     margin: 0;
-    background-color: #121211;
+    background-color: #282c34;
     color: white;
+    overflow: hidden;
 }
 
 .editor {
     display: flex;
-    width: 50%;
-    border-radius: none;
+    flex-direction: row;
+    width: 90%;
+    height: 90vh;
+    border: 1px solid #444;
+    background-color: #1e1e1e;
 }
 
-.code-editor {
-    width: 100%;
+/* Estilos para la parte del editor de código y la salida */
+.code-editor, .output {
+    width: 50%;
     padding: 20px;
     box-sizing: border-box;
-}
-
-.output{
-    height: 110vh;
-    width: 50%;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.9);
-    text-align: left;
+    overflow: auto;
 }
 
 .code-editor h2, .output h2 {
     margin-top: 0;
 }
 
+/* Estilos para los textareas */
 textarea {
     width: 100%;
     height: 30%;
@@ -49,6 +49,7 @@ textarea:focus {
     outline: none;
 }
 
+/* Estilos para los botones */
 button {
     margin: 5px 0;
     padding: 10px 20px;
@@ -65,10 +66,59 @@ button:hover {
     transform: scale(0.95);
 }
 
-
+/* Estilos para el iframe de salida */
 iframe {
     width: 100%;
     height: calc(100% - 40px);
     border: none;
     background-color: white;
+}
+
+/* Media Queries para hacerlo responsive */
+
+/* Para pantallas de menos de 768px (tabletas y móviles) */
+@media (max-width: 768px) {
+    .editor {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .code-editor, .output {
+        width: 100%;
+        height: 50vh;
+        padding: 10px;
+    }
+
+    iframe {
+        height: 100%;
+    }
+
+    textarea {
+        height: 20%;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+/* Para pantallas muy pequeñas, de menos de 480px (móviles pequeños) */
+@media (max-width: 480px) {
+    .code-editor, .output {
+        height: 45vh;
+    }
+
+    textarea {
+        height: 15%;
+        font-size: 12px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+
+    iframe {
+        height: calc(100% - 50px);
+    }
 }
