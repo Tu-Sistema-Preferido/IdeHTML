@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,13 +21,12 @@
             <textarea id="jsCode" placeholder="Escribe tu código JavaScript aquí"></textarea>
             <button onclick="downloadCode('js')">Download JavaScript</button>
             <br><br><br>
-            <button onclick="runCode()">Ejecutar</button>
-            <br><br><br><br>
+            <button onclick="runCode()">Run Code</button>
         </div>
-    </div>
-    <div class="output">
-        <h2>Resultado</h2>
-        <iframe id="outputFrame"></iframe>
+        <div class="output">
+            <h2>Output</h2>
+            <iframe id="outputFrame"></iframe>
+        </div>
     </div>
 
     <script src="script.js"></script>
